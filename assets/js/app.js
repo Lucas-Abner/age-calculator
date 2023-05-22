@@ -15,16 +15,11 @@ function sendValue(e){
     }else if(yearValue.value === ""){
         alert("Necessario preencher o dia com 4 números");
     }else{
-        handleNumber();
+        handleNumber(dayValue, monthValue, yearValue);
     }
 }
 
-function handleNumber(){
-
-    let dayValue = document.querySelector(".day-info");
-    let monthValue = document.querySelector(".month-info");
-    let yearValue = document.querySelector(".year-info");
-
+function handleNumber(dayValue, monthValue, yearValue){
     let date = new Date();
     let y = date.getFullYear();
     let m = date.getMonth() + 1;
