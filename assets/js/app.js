@@ -23,19 +23,27 @@ function handleNumber(dayValue, monthValue, yearValue){
     let date = new Date();
     let y = date.getFullYear();
     let m = date.getMonth() + 1;
-    let d = date.getDay() + 1;
+    let d = date.getDate();
 
     let yearDate = y - yearValue.value;
-    let monthDate = m - monthValue.value
+    let monthDate = m - monthValue.value;
     let dayDate = dayValue.value - d;
 
-    document.querySelector(".birthday-calc--year span").innerHTML = toInt(yearDate);
-    document.querySelector(".birthday-calc--month span").innerHTML = toInt(monthDate);
-    document.querySelector(".birthday-calc--day span").innerHTML = toInt(dayDate); 
+    document.querySelector(".birthday-calc--year span").innerHTML = yearDate;
+    document.querySelector(".birthday-calc--month span").innerHTML = monthDate;
+    document.querySelector(".birthday-calc--day span").innerHTML = dayDate; 
+
+    checkDate(dayValue, monthValue, yearValue);
 }
 
-function toInt(valor){
-    return valor < 10 ? `0${valor}` : valor;
+function  checkDate(dayValue, monthValue, yearValue){
+    if(dayValue.value > 31){
+        alert("Valor máximo de dias é 31")
+    }else if(monthValue.value > 12){
+        alert("Valor máximo de mês a ser inserido é 12")
+    }else if(yearValue.value > 2023){
+        alert("O valor informado é baseado no ano atual")
+    }
 }
 
 function limitHeight(input, tamanhoMax){
