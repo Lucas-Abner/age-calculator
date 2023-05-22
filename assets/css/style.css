@@ -54,6 +54,13 @@ label{
     border-radius: 3px;
     padding: 10px;
     transition: 0.2s ease;
+    appearance: none;
+}
+
+.birthday form input::-webkit-inner-spin-button,
+.birthday form input::-webkit-outer-spin-button{
+    appearance: none;
+    margin: 0;
 }
 
 .birthday form input:focus{

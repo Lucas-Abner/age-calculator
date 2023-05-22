@@ -17,16 +17,16 @@
           <form>
             <div class="birthday-day">
               <label for="day">DAY</label>
-              <input type="text" placeholder="DD" class="day-info"
-              maxlength="2">
+              <input type="number" placeholder="DD" class="day-info"
+              maxlength="2" oninput="limitHeight(this, 2)">
             </div>
             <div class="birthday-month">
               <label for="day">MONTH</label>
-              <input type="text" placeholder="MM" class="month-info" maxlength="2">
+              <input type="number" placeholder="MM" class="month-info" min="1" maxlength="2" oninput="limitHeight(this, 2)">
             </div>
             <div class="birthday-year">
               <label for="day">YEAR</label>
-              <input type="text" placeholder="YYYY" class="year-info" maxlength="4">
+              <input type="number" placeholder="YYYY" class="year-info" min="1" maxlength="4" oninput="limitHeight(this, 4)">
             </div>
           </form>
           <div class="division">
@@ -36,13 +36,13 @@
           </div>
           <div class="birthday-calc">
             <div class="birthday-calc--year">
-              <span>- -</span>years
+              <span>- -</span> years
             </div>
             <div class="birthday-calc--month">
-              <span>- -</span>month
+              <span>- -</span> month
             </div>
             <div class="birthday-calc--day">
-              <span>- -</span>days
+              <span>- -</span> days
             </div>
           </div>
         </div>
